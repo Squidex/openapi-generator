@@ -529,6 +529,7 @@ public class JavaClientCodegen extends AbstractJavaCodegen
             // The flag below should be set for all Java libraries, but the templates need to be ported
             // one by one for each library.
             supportsAdditionalPropertiesWithComposedSchema = true;
+            reservedWords.remove("file");
 
         } else if (RETROFIT_2.equals(getLibrary())) {
             supportingFiles.add(new SupportingFile("auth/OAuthOkHttpClient.mustache", authFolder, "OAuthOkHttpClient.java"));
